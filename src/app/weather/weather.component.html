@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          <h1 class="text-center my-4">Search for Weather:</h1>
+          <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      id="weatherLocation"
+      aria-describedby="weatherLocation"
+      placeholder="Please input a Location"
+      formControlName="location" />
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-success btn-md">
+      Search for the weather
+    </button>
+  </div>
+</form>
+        </div>
+      <div class="col-md-6">
+        <h1 class="text-center">Location Searched: {{this.weatherData?.location.name}},
+            {{this.weatherData?.location.country}}</h1>
+        <h2 class="text-center my-4">Weather Details:</h2>
+        <h3 class="text-center">Current weather conditions: {{this.weatherData?.current.weather_descriptions}}</h3>
+        <h3 class="text-center">Temperature: {{this.weatherData?.current.temperature}} °C</h3> 
+        <h3 class="text-center">Humidity: {{this.weatherData?.current.humidity}}%</h3>
+        <h3 class="text-center">Cloud Cover: {{this.weatherData?.current.cloudcover}}%</h3>
+        <h3 class="text-center">Precipitation: {{this.weatherData?.current.precip}} mm</h3>
+        <h3 class="text-center">Wind Speed: {{this.weatherData?.current.wind_speed}} km/h</h3>
+        <h3 class="text-center">UV Index: {{this.weatherData?.current.uv_index}}</h3>
+        <h3 class="text-center">Visibility: {{this.weatherData?.current.visibility}} km</h3>
+    </div>
+    </div>
+</div>
+  
