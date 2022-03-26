@@ -1,27 +1,20 @@
 # WeatherApp
+- Weather Forcasting application built with Angular. 
+- The application uses the Weatherstack API anf REST framework to retrieve instant, accurate weather information for
+any location in the world in lightweight JSON format.
+- Angular is a development platform, built on TypeScript which includes a component-based framework for building scalable web applications, a collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, etc. and a suite of developer tools to help you develop, build, test, and update your code.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Using WeatherApp
+- To use this application, clone this repository using
+-     $ git clone https://github.com/Chinmayeegade/Angular_API_Weather_App.git
+- Generate an API key from https://weatherstack.com/dashboard
+- Replace [YOUR_API_KEY] with the generated API key on line 13 in the Angular_API_Weather_App/src/app/apixu.service.ts file.
+-       getWeather(location : any) {
+          return this.http.get(
+            "http://api.weatherstack.com/current?access_key=[YOUR_API_KEY]&query=" + location
+           );
+        }
+      }
+- Start the development server 
+-      $ ng serve
+- The app will be accessible on http://localhost:4200       
