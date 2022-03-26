@@ -1,6 +1,6 @@
 # WeatherApp
 - Weather Forcasting application built with Angular. 
-- The application uses the Weatherstack API anf REST framework to retrieve instant, accurate weather information for
+- The application uses the Weatherstack API and REST framework to retrieve instant, accurate weather information for
 any location in the world in lightweight JSON format.
 - Angular is a development platform, built on TypeScript which includes a component-based framework for building scalable web applications, a collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, etc. and a suite of developer tools to help you develop, build, test, and update your code.
 
